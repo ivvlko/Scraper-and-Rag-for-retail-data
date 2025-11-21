@@ -1,6 +1,22 @@
-version: "3.9"
-
 services:
+  db:
+    image: ankane/pgvector:latest
+    container_name: pgvector
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
   scraper:
     build: ./scraper_service
     container_name: fosil_scraper
@@ -16,3 +32,36 @@ services:
     depends_on:
       - scraper
     restart: "no"
+
+  data_ingestor:
+    build: ./data_ingestion_service
+    container_name: fosil_ingestor
+    environment:
+      OPEN_AI_API_KEY: ${OPEN_AI_API_KEY}
+      EMBEDDING_MODEL: text-embedding-3-small
+      PG_URI: postgresql://postgres:postgres@db:5432/postgres
+    volumes:
+      - ./data:/data
+    depends_on:
+      db:
+        condition: service_healthy
+      data_processor:
+        condition: service_completed_successfully
+    restart: "no"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
+volumes:
+  pg_data:
+  pgadmin_data:
