@@ -20,6 +20,10 @@ class FosilScraper(BaseScraper):
         script_tag = soup.find("script", type="application/ld+json")
         if not script_tag:
             return None
+        
+        out_of_stock = soup.find("h4", class_="opacity-50")
+        if out_of_stock and "Продуктът е изчерпан" in out_of_stock.text:
+            return None
 
         raw_json = script_tag.text
 

@@ -3,7 +3,7 @@
 # and only if adding paragraph exceeds max_length, save current chunk
 
 
-def chunk_text(text: str, max_length: int = 1000) -> list:
+def chunk_text(text: str, max_length: int = 10000) -> list:
     if not text:
         return []
 
