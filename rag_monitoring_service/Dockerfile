@@ -7,5 +7,3 @@ RUN apt-get update && apt-get install -y gcc libpq-dev build-essential && rm -rf
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-
-CMD ["python", "main.py", "evaluate"]

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fosil Chat</title>
+  <title>Chat</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -86,7 +86,7 @@
 
     ws.send(JSON.stringify({
       query: text,
-      top_k: 5,
+      top_k: 3,
       gpt_answer: true
     }));
 
