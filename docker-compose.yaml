@@ -79,6 +79,22 @@ services:
       data_ingestor:
         condition: service_completed_successfully
 
+  rag_orchestrator:
+    build: ./rag_monitoring_service
+    container_name: rag_monitoring_service
+    environment:
+      OPEN_AI_API_KEY: ${OPEN_AI_API_KEY}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL}
+      PG_URI: postgresql://postgres:postgres@db:5432/postgres
+    volumes:
+      - ./rag_monitoring_service:/app
+    depends_on:
+      db:
+        condition: service_healthy
+      data_ingestor:
+        condition: service_completed_successfully
+    restart: "no"
+
 volumes:
   pg_data:
   pgadmin_data:

@@ -1,0 +1,25 @@
+[
+  {
+    "query": "Мегалодон зъб размер около 12см",
+    "expected_ids": ["5186_0"]
+  },
+  {
+    "query": "Опализиран амонит 17х14",
+    "expected_ids": ["1252_0"]
+  },
+  {
+    "query": "малък фосил на акула",
+    "expected_ids": ["4492_0"]
+  },
+
+  {
+    "query": "цена на Белемнит",
+    "expected_price": ["12.0"]
+  },
+
+  {
+    "query": "линк на Белемнит",
+    "expected_link": ["https://vantony.com/4-fosili/99-belemnit"]
+  }
+
+]
