@@ -87,3 +87,8 @@ This design provides solutions to couple very important concerns regarding this 
 - simple UI - another monitoring service - specifically delegated for evaluation and optmization - can be customized or grafana/prometheus 
 - add better logging - custom or elasticsearch/kibana or solar?
 - add option for hybrid retrieval - old school keyword search might even outperform the similarity search for retail data, as its not very complex
+
+
+## Demo
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=TCD7Erpa0-M)
+
