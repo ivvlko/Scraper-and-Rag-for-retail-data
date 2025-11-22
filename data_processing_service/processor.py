@@ -19,11 +19,13 @@ class DataProcessor:
             "name": clean_text(data.get("name")),
             "price": clean_price(data.get("price")),
             "url": data.get("url"),
-            "chunks": chunk_text(clean_text(data.get("description"))) +
-                      chunk_text(clean_text(data.get("name"))) +
-                      chunk_text(clean_text(data.get("price"))) +
-                      chunk_text(clean_text(data.get("id"))) + 
-                      chunk_text(clean_text(data.get("url"))) 
+            "chunks": chunk_text(clean_text(data.get("description")) +
+                       " име: " + clean_text(data.get("name"))+ 
+                       " цена: " + clean_text(data.get("price")) +
+                       " id/идентификатор: " + clean_text(data.get("id")) + 
+                       " урл/линк/url " + clean_text(data.get("url"))
+                       )
+
         }
 
         out_path = os.path.join(self.processed_dir, f"{processed['id']}.json")
