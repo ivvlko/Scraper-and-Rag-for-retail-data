@@ -11,7 +11,7 @@ from config import rag_configs
 PG_URI = os.getenv("PG_URI", "postgresql://postgres:postgres@db:5432/postgres")
 EMBEDDING_MODEL = rag_configs.get("EMBEDDING_MODEL")
 LLM_MODEL = rag_configs.get("LLM_MODEL")
-TOP_K = rag_configs.get("TOP_K", 2)
+TOP_K = rag_configs.get("TOP_K", 5)
 SYSTEM_PROMPT = rag_configs.get("SYSTEM_PROMPT")
 
 client = OpenAI(api_key=os.getenv("OPEN_AI_API_KEY"))

@@ -19,7 +19,11 @@ class DataProcessor:
             "name": clean_text(data.get("name")),
             "price": clean_price(data.get("price")),
             "url": data.get("url"),
-            "chunks": chunk_text(clean_text(data.get("description")))
+            "chunks": chunk_text(clean_text(data.get("description"))) +
+                      chunk_text(clean_text(data.get("name"))) +
+                      chunk_text(clean_text(data.get("price"))) +
+                      chunk_text(clean_text(data.get("id"))) + 
+                      chunk_text(clean_text(data.get("url"))) 
         }
 
         out_path = os.path.join(self.processed_dir, f"{processed['id']}.json")
