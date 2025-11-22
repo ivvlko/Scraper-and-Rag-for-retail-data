@@ -1,69 +1,267 @@
 {
-  "cases": 3,
+  "cases": 5,
   "top_k": 5,
-  "avg_hit": 1.0,
-  "avg_mrr": 0.8333333333333334,
-  "avg_ndcg": 1.0,
-  "avg_latency_s": 0.3072014093331745,
+  "avg_hit_ids": 0.6,
+  "avg_hit_price": 0.0,
+  "avg_hit_link": 0.2,
+  "avg_hit_combined": 0.8,
+  "avg_mrr_ids": 0.5,
+  "avg_mrr_price": 0.0,
+  "avg_mrr_link": 0.2,
+  "avg_ndcg_ids": 0.6,
+  "avg_ndcg_price": 0.0,
+  "avg_ndcg_link": 0.2,
+  "avg_latency_s": 0.323346269799913,
   "details": [
     {
       "query": "Мегалодон зъб размер около 12см",
-      "expected": [
-        "5186_0",
-        "5184_0"
-      ],
-      "retrieved": [
+      "expected": {
+        "expected_ids": [
+          "5186_0"
+        ],
+        "expected_price": [],
+        "expected_link": []
+      },
+      "retrieved_ids": [
         "5183_0",
         "5186_0",
         "5184_0",
         "4492_0",
         "2184_0"
       ],
-      "hit": 1,
-      "mrr": 0.5,
-      "ndcg": 1.0,
-      "embed_time": 0.37779453999974066,
-      "db_time": 0.022661635000076785,
-      "total_time": 0.40045617499981745
+      "retrieved_prices": [
+        "None",
+        "None",
+        "None",
+        "None",
+        "None"
+      ],
+      "retrieved_links": [
+        "https://vantony.com/4-fosili/5183-zab-ot-megalodon",
+        "https://vantony.com/4-fosili/5186-zab-ot-megalodon",
+        "https://vantony.com/4-fosili/5184-zab-ot-megalodon",
+        "https://vantony.com/4-fosili/4492-zab-ot-akula-fosil",
+        "https://vantony.com/4-fosili/2184-amonit-vkamenelost-2br"
+      ],
+      "metrics_ids": {
+        "hit": 1,
+        "mrr": 0.5,
+        "ndcg": 1.0
+      },
+      "metrics_price": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "metrics_link": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "combined_hit": 1,
+      "embed_time": 0.6911880690004182,
+      "db_time": 0.07241707599951042,
+      "total_time": 0.7636051449999286
     },
     {
       "query": "Опализиран амонит 17х14",
-      "expected": [
-        "1252_0",
-        "3415_0"
-      ],
-      "retrieved": [
+      "expected": {
+        "expected_ids": [
+          "1252_0"
+        ],
+        "expected_price": [],
+        "expected_link": []
+      },
+      "retrieved_ids": [
         "1252_0",
         "2184_0",
         "107_0",
         "5096_0",
         "5184_0"
       ],
-      "hit": 1,
-      "mrr": 1.0,
-      "ndcg": 1.0,
-      "embed_time": 0.1887366569999358,
-      "db_time": 0.01563951700063626,
-      "total_time": 0.20437617400057206
+      "retrieved_prices": [
+        "None",
+        "None",
+        "None",
+        "None",
+        "None"
+      ],
+      "retrieved_links": [
+        "https://vantony.com/4-fosili/1252-amonit-vkamenelost-17h14sm",
+        "https://vantony.com/4-fosili/2184-amonit-vkamenelost-2br",
+        "https://vantony.com/4-fosili/107-amonit-piritiziran",
+        "https://vantony.com/4-fosili/5096-流湯瑩",
+        "https://vantony.com/4-fosili/5184-zab-ot-megalodon"
+      ],
+      "metrics_ids": {
+        "hit": 1,
+        "mrr": 1.0,
+        "ndcg": 1.0
+      },
+      "metrics_price": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "metrics_link": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "combined_hit": 1,
+      "embed_time": 0.19648436199986463,
+      "db_time": 0.01841580000018439,
+      "total_time": 0.21490016200004902
     },
     {
       "query": "малък фосил на акула",
-      "expected": [
-        "4492_0"
-      ],
-      "retrieved": [
+      "expected": {
+        "expected_ids": [
+          "4492_0"
+        ],
+        "expected_price": [],
+        "expected_link": []
+      },
+      "retrieved_ids": [
         "4492_0",
         "5096_0",
         "107_0",
         "5183_0",
         "5184_0"
       ],
-      "hit": 1,
-      "mrr": 1.0,
-      "ndcg": 1.0,
-      "embed_time": 0.2982489159994657,
-      "db_time": 0.01852296299966838,
-      "total_time": 0.31677187899913406
+      "retrieved_prices": [
+        "None",
+        "None",
+        "None",
+        "None",
+        "None"
+      ],
+      "retrieved_links": [
+        "https://vantony.com/4-fosili/4492-zab-ot-akula-fosil",
+        "https://vantony.com/4-fosili/5096-流湯瑩",
+        "https://vantony.com/4-fosili/107-amonit-piritiziran",
+        "https://vantony.com/4-fosili/5183-zab-ot-megalodon",
+        "https://vantony.com/4-fosili/5184-zab-ot-megalodon"
+      ],
+      "metrics_ids": {
+        "hit": 1,
+        "mrr": 1.0,
+        "ndcg": 1.0
+      },
+      "metrics_price": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "metrics_link": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "combined_hit": 1,
+      "embed_time": 0.18647636100013187,
+      "db_time": 0.018601361999571964,
+      "total_time": 0.20507772299970384
+    },
+    {
+      "query": "цена на Белемнит",
+      "expected": {
+        "expected_ids": [],
+        "expected_price": [
+          "12.0"
+        ],
+        "expected_link": []
+      },
+      "retrieved_ids": [
+        "99_0",
+        "2184_0",
+        "107_0",
+        "1252_0",
+        "4492_0"
+      ],
+      "retrieved_prices": [
+        "None",
+        "None",
+        "None",
+        "None",
+        "None"
+      ],
+      "retrieved_links": [
+        "https://vantony.com/4-fosili/99-belemnit",
+        "https://vantony.com/4-fosili/2184-amonit-vkamenelost-2br",
+        "https://vantony.com/4-fosili/107-amonit-piritiziran",
+        "https://vantony.com/4-fosili/1252-amonit-vkamenelost-17h14sm",
+        "https://vantony.com/4-fosili/4492-zab-ot-akula-fosil"
+      ],
+      "metrics_ids": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "metrics_price": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "metrics_link": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "combined_hit": 0,
+      "embed_time": 0.20377028999973845,
+      "db_time": 0.015093361999788613,
+      "total_time": 0.21886365199952706
+    },
+    {
+      "query": "линк на Белемнит",
+      "expected": {
+        "expected_ids": [],
+        "expected_price": [],
+        "expected_link": [
+          "https://vantony.com/4-fosili/99-belemnit"
+        ]
+      },
+      "retrieved_ids": [
+        "99_0",
+        "107_0",
+        "2184_0",
+        "1252_0",
+        "4492_0"
+      ],
+      "retrieved_prices": [
+        "None",
+        "None",
+        "None",
+        "None",
+        "None"
+      ],
+      "retrieved_links": [
+        "https://vantony.com/4-fosili/99-belemnit",
+        "https://vantony.com/4-fosili/107-amonit-piritiziran",
+        "https://vantony.com/4-fosili/2184-amonit-vkamenelost-2br",
+        "https://vantony.com/4-fosili/1252-amonit-vkamenelost-17h14sm",
+        "https://vantony.com/4-fosili/4492-zab-ot-akula-fosil"
+      ],
+      "metrics_ids": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "metrics_price": {
+        "hit": 0,
+        "mrr": 0.0,
+        "ndcg": 0.0
+      },
+      "metrics_link": {
+        "hit": 1,
+        "mrr": 1.0,
+        "ndcg": 1.0
+      },
+      "combined_hit": 1,
+      "embed_time": 0.19895192599960865,
+      "db_time": 0.015332741000747774,
+      "total_time": 0.21428466700035642
     }
   ]
 }
